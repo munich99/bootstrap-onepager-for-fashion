@@ -1,7 +1,13 @@
 .bg-primary {
-    background-color: #776655!important;
+    background-color: #b0a216!important;
 }
 
 .bg-light {
-    background-color: #ccbbaa!important;
+    background-color: rgba(176, 162, 22, 0.1)!important;
+}
+
+.logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 150%;
+    letter-spacing: 3px;
 }
