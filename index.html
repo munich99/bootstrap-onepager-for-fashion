@@ -180,7 +180,7 @@
             <div class="row">
                   <div class="col-lg-8 mx-auto bg-white">
 
-                        <h2 class="text-primary mt-2">accessoires</h2>
+                        <h2 class="text-primary mt-2">Accessoires</h2>
                         <span class="lead">Produkte sind Herzensangelegenheiten und in Perfektion verarbeitet.
 Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tradition. Stilvolle Accessoires, Einzigartigkeit und Individualität.</span> 
 
@@ -305,14 +305,53 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
     </div>
   </section>
 
-
-
   <section id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          <div class="card-body px-0">
+            <form class="contact__form" (submit)="contactUser($event)">
+                
+                <!-- form message -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                            Your message was sent successfully.
+                        </div>
+                    </div>
+                </div>
+                <!-- end message -->
+
+                <!-- form element -->
+                <div class="row mx-0">
+                    <div class="col-md-6 form-group pl-0">
+                        <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
+                    </div>
+                    <div class="col-md-6 form-group pr-0">
+                        <input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="col-md-6 form-group pl-0">
+                        <input name="phone" type="text" class="form-control" placeholder="Phone" id="phone" required>
+                    </div>
+                    <div class="col-md-6 form-group pr-0">
+                        <input name="subject" type="text" class="form-control" placeholder="Subject" id="subject" required>
+                    </div>
+                    <div class="col-12 form-group px-0">
+                        <textarea name="message" class="form-control" rows="3" placeholder="Message" id="mailmessage" required></textarea>
+                    </div>
+                    <div class="col-12 px-0">
+                        <input name="submit" type="submit" class="btn btn-success w-100" value="Nachricht absenden">
+                    </div>
+                </div>
+                <!-- end form element -->
+            </form>
+        </div>
+
+
+
+
+
         </div>
       </div>
     </div>

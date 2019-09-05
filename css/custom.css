@@ -23,3 +23,8 @@
 .card-header { 
     background-color: rgba(176, 162, 22, 0.1)!important;    
 }
+
+.btn-success, .btn-success:hover {
+    background-color: rgba(176, 162, 22, 0.7)!important; 
+    border-color: rgba(176, 162, 22, 1)!important;
+}
