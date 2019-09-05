@@ -12,7 +12,14 @@
     letter-spacing: 3px;
 }
 
-
 .text-primary {
     color: #8b8111!important;
+}
+
+.card {
+    border-color:rgba(176, 162, 22, 0.4)!important;
+}
+
+.card-header { 
+    background-color: rgba(176, 162, 22, 0.1)!important;    
 }
