@@ -30,6 +30,10 @@
     border-color: rgba(176, 162, 22, 1)!important;
 }
 
+footer .col-4 a {
+   text-decoration: underline!important; 
+}
+
 
 /* none bootstrap */
 
