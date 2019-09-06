@@ -18,6 +18,7 @@
 
 .card {
     border-color:rgba(176, 162, 22, 0.4)!important;
+    margin-bottom: 1px;
 }
 
 .card-header { 
