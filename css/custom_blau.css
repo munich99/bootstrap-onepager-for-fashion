@@ -1,0 +1,41 @@
+.bg-primary {
+    background-color: #02557c!important;
+}
+
+.bg-light {
+    background-color: #99cbf6!important;
+}
+
+.logo {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 150%;
+    letter-spacing: 3px;
+}
+
+.text-primary {
+    color: #025177!important;
+}
+
+.card {
+    border-color:#0e4264!important;
+}
+
+.card-header { 
+    background-color: #2f90dc!important;    
+}
+
+.btn-success, .btn-success:hover {
+    background-color: #2f90dc!important; 
+    border-color: #2f90dc!important;
+}
+
+.btn-link {
+    color:#fff
+}
+
+
+/* none bootstrap */
+
+@media (min-width: 768px) {
+    .showkleider {background-color: white}
+ }

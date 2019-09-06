@@ -28,3 +28,10 @@
     background-color: rgba(176, 162, 22, 0.7)!important; 
     border-color: rgba(176, 162, 22, 1)!important;
 }
+
+
+/* none bootstrap */
+
+@media (min-width: 768px) {
+    .whitebig {background-color: white}
+ }
