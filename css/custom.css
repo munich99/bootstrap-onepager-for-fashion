@@ -30,10 +30,13 @@
     border-color: rgba(176, 162, 22, 1)!important;
 }
 
-
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
 
 /* none bootstrap */
 
 @media (min-width: 768px) {
     .whitebig {background-color: white}
  }
+

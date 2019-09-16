@@ -135,15 +135,19 @@
                                           Schon in meiner Ausbildungszeit zur Schneider-Meisterin entwarf und fertigte ich Showkleider für viele verschiedene Events an</p>
                                     </div>                            
                           </div>
-<!-- karusell -->
+
                           <div id="carouselExampleControls" class="carousel slide mb-3" data-ride="carousel">
                               <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
-                                        <div class="col-3"><img class="img-fluid" src="img/bild_1.jpg" alt="First slide"></div>
-                                        <div class="col-3"><img class="img-fluid" src="img/bild_2.jpg" alt="First slide"></div>
-                                        <div class="col-3"><img class="img-fluid" src="img/bild_3.jpg" alt="First slide"></div>
-                                        <div class="col-3"><img class="img-fluid" src="img/bild_4.jpg" alt="First slide"></div>
+                                        <div class="col-3" type="button" data-toggle="modal" data-target="#myModal" data-title="bild_1.jpg">
+                                          <img class="img-fluid" src="img/bild_1.jpg" alt="First slide"></div>
+                                        <div class="col-3" type="button" data-toggle="modal" data-target="#myModal" data-title="bild_2.jpg">
+                                          <img class="img-fluid" src="img/bild_2.jpg" alt="First slide"></div>
+                                        <div class="col-3" type="button" data-toggle="modal" data-target="#myModal" data-title="bild_3.jpg">
+                                          <img class="img-fluid" src="img/bild_3.jpg" alt="First slide"></div>
+                                        <div class="col-3" type="button" data-toggle="modal" data-target="#myModal" data-title="bild_4.jpg">
+                                          <img class="img-fluid" src="img/bild_4.jpg" alt="First slide"></div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
@@ -420,11 +424,12 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
   </div>
 
   
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_1.jpg">Feedback</button>
 
-  <!--div class="bs-example">
-      < Button HTML (to Trigger Modal) 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Feedback">Feedback</button>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Report Error">Report Error</button>
+  <div class="bs-example">
+      <!-- Button HTML (to Trigger Modal) -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_1.jpg">Feedback</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_2.jpg">Report Error</button>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Contact Us">Contact Us</button>
   
       <div id="myModal" class="modal fade" tabindex="-1">
@@ -434,8 +439,13 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
                       <div class="modal-header">
                           <h5 class="modal-title">Modal Window</h5>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                          
+                          
                       </div>
-                      <div class="modal-body">                        
+                      <div class="modal-body"> 
+                        <div class="bildtausch"> </div>
+                                              
                           <div class="form-group">
                               <label class="control-label">Email:</label>
                               <input type="text" class="form-control">
@@ -455,8 +465,6 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
       </div>
   </div>
 
-  -->
-
 
 
   <!-- Bootstrap core JavaScript -->
@@ -475,7 +483,9 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
       
               // Extract value from the custom data-* attribute
               var titleData = button.data("title");
-              $(this).find(".modal-title").text(titleData);
+              // $(this).find(".bildtausch").src(titleData);
+              $('.bildtausch').prepend('<img id="theImg" src="./img/'+titleData+'" />')
+              // alert(titleData);
           });
       });
       </script>
