@@ -1,3 +1,9 @@
+#carouselExampleControls [type=button]:not(:disabled), #carouselExampleControls button:not(:disabled) {
+    border-radius: 0.25rem;
+    border-color: transparent;
+    background-color: white;
+}
+
 .bg-primary {
     background-color: #b0a216!important;
 }
@@ -15,6 +21,9 @@
 .text-primary {
     color: #8b8111!important;
 }
+.text-secondary { 
+    color: #343a40!important; 
+    }
 
 .card {
     border-color:rgba(176, 162, 22, 0.4)!important;
@@ -28,6 +37,12 @@
 .btn-success, .btn-success:hover {
     background-color: rgba(176, 162, 22, 0.7)!important; 
     border-color: rgba(176, 162, 22, 1)!important;
+}
+
+.btn-link, a {
+    font-weight: 400;
+    color: #8b8111;
+    text-decoration: none;
 }
 
 .carousel-control-next, .carousel-control-prev {
