@@ -1,16 +1,30 @@
-#carouselExampleControls [type=button]:not(:disabled), #carouselExampleControls button:not(:disabled) {
+.for-modal [type=button]:not(:disabled), .for-modal button:not(:disabled)
+ {
     border-radius: 0.25rem;
     border-color: transparent;
-    background-color: white;
+    background-color: white; 
+
+    -moz-border-radius: 0.25rem;
+    -moz-border-color: transparent;
+    -moz-background-color: white; 
 }
 
 .bg-primary {
     background-color: #b0a216!important;
 }
 
+.bg-secondary {
+    background-color:#bcba9e!important;
+}
+
 .bg-light {
     background-color: rgba(176, 162, 22, 0.1)!important;
 }
+.border-primary {
+    border-color:  rgba(176, 162, 22)!important;
+}
+
+
 
 .logo {
     font-family: 'M PLUS Rounded 1c', sans-serif;
