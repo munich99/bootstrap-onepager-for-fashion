@@ -330,20 +330,21 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Kontakt</h2>
-          <div class="card-body px-0">
+          <a href="mailto:info@edithion.de">info@edithion.de</a>
+          <!--div class="card-body px-0">
             <form class="contact__form" (submit)="contactUser($event)">
                 
-                <!-- form message -->
-                <div class="row">
+                 form message -->
+               <!-- <div class="row">
                     <div class="col-12">
                         <div class="alert alert-success contact__msg" style="display: none" role="alert">
                             Your message was sent successfully.
                         </div>
                     </div>
                 </div>
-                <!-- end message -->
+                end message -->
 
-                <!-- form element -->
+                <!-- form element
                 <div class="row mx-0">
                     <div class="col-md-6 form-group px-0 pr-md-3">
                         <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
@@ -364,11 +365,11 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
                         <input name="submit" type="submit" class="btn btn-success w-100" value="Nachricht absenden">
                     </div>
                 </div>
-                <!-- end form element -->
+                <!-- end form element 
             </form>
         </div>
 
-
+-->
 
 
 
@@ -384,9 +385,9 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
             <div class="col-lg-8 mx-auto">                 
               <div class="row text-center">
                   <div class="col-12 col-md-4 mb-5"><h5>Cooperation</h5>
-                    <a href="lkhl" class="btn btn-link text-white">webdesign - filizanka.net</a><br>
-                    <a href="lkhl" class="btn btn-link text-white">Sporthaus Schuster</a><br>
-                    <a href="lkhl" class="btn btn-link text-white">Quality for Dance</a>
+                    <a href="http://filizanka.net/" class="btn btn-link text-white" target="partner">webdesign - filizanka.net</a><br>
+                    <a href="https://www.sport-schuster.de/" class="btn btn-link text-white" target="partner">Sporthaus Schuster</a><br>
+                    <a href="https://www.quality-for-dance.de/" class="btn btn-link text-white" target="partner">Quality for Dance</a>
                 </div>
                 <div class="col-12 col-md-4 mb-3"><h5>Erreichbarkeit</h5>
                     <p>Edithion<br>Schwalbenstr. 2<br>81541 München<br><br>+49 (0)170 415 80 26</p>
@@ -432,23 +433,16 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
         </div>
       </div>
     </div>
-  </div>
-
-  
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_1.jpg">Feedback</button>
+  </div>  
 
   <div class="bs-example">
       <!-- Button HTML (to Trigger Modal) -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_1.jpg">Feedback</button>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="acc_2.jpg">Report Error</button>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-title="Contact Us">Contact Us</button>
-  
-      <div id="myModal" class="modal fade" tabindex="-1">
+<div id="myModal" class="modal fade" tabindex="-1">
           <div class="modal-dialog">
               <div class="modal-content">
                   <form>
                       <div class="modal-header">
-                          <h5 class="modal-title">Modal Window</h5>
+                          <h5 class="modal-title">Meine Arbeiten</h5>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body"> 
@@ -482,10 +476,7 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
       
               // Extract value from the custom data-* attribute
               var titleData = button.data("title");
-              // $(this).find(".bildtausch").src(titleData);
-              //$('.bildtausch').prepend('<img id="theImg" src="./img/'+titleData+'" />')
               $("#theImg").attr("src", "./img/" + titleData);
-              // alert(titleData);
           });
       });
       </script>
