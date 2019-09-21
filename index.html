@@ -19,7 +19,6 @@
   <!-- Custom styles for this template -->
   <link href="css/scrolling-nav.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 
 
@@ -334,46 +333,77 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Kontakt</h2>
-          <a href="mailto:info@edithion.de">info@edithion.de</a>
-          <!--div class="card-body px-0">
-            <form class="contact__form" (submit)="contactUser($event)">
-                
-                 form message -->
-               <!-- <div class="row">
-                    <div class="col-12">
-                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                            Your message was sent successfully.
-                        </div>
-                    </div>
-                </div>
-                end message -->
+          
+          <div class="card-body px-0">
+            <form id="contact-form" method="post" action="php/contact.php" role="form">
 
-                <!-- form element
-                <div class="row mx-0">
-                    <div class="col-md-6 form-group px-0 pr-md-3">
-                        <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
-                    </div>
-                    <div class="col-md-6 form-group px-0 pl-md-3">
-                        <input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
-                    </div>
-                    <div class="col-md-6 form-group px-0 pr-md-3">
-                        <input name="phone" type="text" class="form-control" placeholder="Phone" id="phone" required>
-                    </div>
-                    <div class="col-md-6 form-group px-0 pl-md-3">
-                        <input name="subject" type="text" class="form-control" placeholder="Subject" id="subject" required>
-                    </div>
-                    <div class="col-12 form-group px-0">
-                        <textarea name="message" class="form-control" rows="3" placeholder="Message" id="mailmessage" required></textarea>
-                    </div>
-                    <div class="col-12 px-0">
-                        <input name="submit" type="submit" class="btn btn-success w-100" value="Nachricht absenden">
-                    </div>
-                </div>
-                <!-- end form element 
-            </form>
+              <div class="messages"></div>
+
+              <div class="controls">
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_name">Vorname *</label>
+                              <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Ihr Vorname ist eine Pflichtangabe">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_lastname">Nachname *</label>
+                              <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Ihr Nachname ist eine Pflichtangabe">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_email">Email *</label>
+                              <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Ihre Email ist eine Pflichtangabe">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="form_need">Wählen Sie bitte Ihren Wunsch aus</label>
+                              <select id="form_need" name="need" class="form-control" required="required" data-error="Ihr Wunsch ist eine Pflichtauswahl">
+                                  <option value=""></option>
+                                  <option value="Maßarbeiten">Maßarbeiten</option>
+                                  <option value="Beratung Modellfindung">Beratung Modellfindung</option>
+                                  <option value="Schnitt">Schnitt</option>
+                                  <option value="Allgemeine Fragen">Allgemeine Fragen</option>
+                              </select>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                              <label for="form_message">Ihre Nachricht *</label>
+                              <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Bitte eine Nachricht eingeben"></textarea>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <input type="submit" class="btn btn-success btn-send" value="Send message">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <p class="text-muted">
+                              <strong>*</strong> Pflichtfelder. Contact form template by
+                              <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+                      </div>
+                  </div>
+              </div>
+
+          </form>
         </div>
 
--->
+
 
 
 
@@ -495,6 +525,7 @@ Mein Motto: Praktisches und Nützliches verbunden mit Schönheit, Eleganz und Tr
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
+  <script src="js/contact.js"></script>
 
 
 
