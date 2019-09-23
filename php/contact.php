@@ -17,7 +17,7 @@ $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'need' => 'Need', 'email' => 'Email', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Vielen Dank für Ihre Nachricht,:) wir werden uns in kürze bei IHnen Melden!';
+$okMessage = 'Vielen Dank für Ihre Nachricht,:) wir werden uns in kürze bei Ihnen Melden!';
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
