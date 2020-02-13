@@ -4,13 +4,13 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <info@edithion.de>';
+$from = 'Eine Nachricht von deiner Website www.edithion.de <info@edithion.de>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <sebastian.hamburg@yahoo.de>';
+$sendTo = 'Demo contact form <ask@filizanka.net>';
 
 // subject of the email
-$subject = 'New message from contact form';
+$subject = 'New message 2020';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
