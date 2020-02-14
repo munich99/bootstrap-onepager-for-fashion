@@ -17,7 +17,7 @@ $subject = 'New message 2020';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'need' => 'Need', 'email' => 'Email', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Vielen Dank für Ihre Nachricht,:) wir werden uns in kürze bei Ihnen Melden!';
+// $okMessage = 'Vielen Dank für Ihre Nachricht,:) wir werden uns in kürze bei Ihnen Melden!';
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -28,65 +28,66 @@ $secret_key = '6Lec09gUAAAAACJlfqVwE4gACCenLh6wSqNA-hBu'; // Your Google reCaptc
  *  LET'S DO THE SENDING
  */
 
+
+if(!empty($_POST['g-recaptcha-response']))
+{
+                // Request the Google server to validate our captcha
+                $request = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+                // The result is in a JSON format. Decoding..
+                $response = json_decode($request);
+
+                if($response->success)
+                {
+                // Here goes your code.
+                    $okMessage = 'Vielen Dank für Ihre Nachricht,:) wir werden uns in kürze bei Ihnen Melden!';
+                    // echo 'Congratulations! You have passed the reCaptcha!';
+                }
+                else
+                {
+                    $okMessage = 'Nachricht,:)ging schief';
+                // echo 'Please, try again. You must complete the Captcha!';
+                }
+}
+
+
+
+
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
 error_reporting(E_ALL & ~E_NOTICE);
 
 
 
 //-------------------------------
-    if(!empty($_POST['g-recaptcha-response']))
-    {
-        // Request the Google server to validate our captcha
-        $request = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
-        // The result is in a JSON format. Decoding..
-        $response = json_decode($request);
+try
+{
 
-        if($response->success)
-        {
-
-                try
-                {
-
-                    if(count($_POST) == 0) throw new \Exception('Form is empty');
-                            
-                    $emailText = "You have a new message from your contact form\n=============================\n";
-
-                    foreach ($_POST as $key => $value) {
-                        // If the field exists in the $fields array, include it in the email 
-                        if (isset($fields[$key])) {
-                            $emailText .= "$fields[$key]: $value\n";
-                        }
-                    }
-
-                    // All the neccessary headers for the email.
-                    $headers = array('Content-Type: text/plain; charset="UTF-8";',
-                        'From: ' . $from,
-                        'Reply-To: ' . $from,
-                        'Return-Path: ' . $from,
-                    );
-                    
-                    // Send email
-                    mail($sendTo, $subject, $emailText, implode("\n", $headers));
-
-                    $responseArray = array('type' => 'success', 'message' => $okMessage);
-                } // hier endet das try
-
-        }
-        else
-        {
-            echo 'Please, try again. You must complete the Captcha!';
-        }
+    if(count($_POST) == 0) throw new \Exception('Form is empty');
             
+    $emailText = "You have a new message from your contact form\n=============================\n";
 
+    foreach ($_POST as $key => $value) {
+        // If the field exists in the $fields array, include it in the email 
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
     }
 
+    // All the neccessary headers for the email.
+    $headers = array('Content-Type: text/plain; charset="UTF-8";',
+        'From: ' . $from,
+        'Reply-To: ' . $from,
+        'Return-Path: ' . $from,
+    );
+    
+    // Send email
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
-
-
-                catch (\Exception $e)
-                {
-                    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
-                }
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
 
 // ------------------------------------------
 
