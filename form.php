@@ -1,28 +1,29 @@
 <?php
-        $email;$comment;$captcha;
-        if(isset($_POST['email'])){
-          $email=$_POST['email'];
-        }
-        if(isset($_POST['comment'])){
-          $comment=$_POST['comment'];
-        }
-        if(isset($_POST['g-recaptcha-response'])){
-          $captcha=$_POST['g-recaptcha-response'];
-        }
-        if(!$captcha){
-          echo '<h2>Please check the the captcha form.</h2>';
-          exit;
-        }
-        $secretKey = "6Lec09gUAAAAAO_t8FqYI7DOveqOCK4W-BVhD57H";
-        $ip = $_SERVER['REMOTE_ADDR'];
-        // post request to server
-        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-        $response = file_get_contents($url);
-        $responseKeys = json_decode($response,true);
-        // should return JSON with success as true
-        if($responseKeys["success"]) {
-                echo '<h2>Thanks for posting comment</h2>';
-        } else {
-                echo '<h2>You are spammer ! Get the @$%K out</h2>';
-        }
+
+ini_set("allow_url_fopen", 1);
+
+echo 'irgendwas';
+
+
+$secret_key = '6Lec09gUAAAAACJlfqVwE4gACCenLh6wSqNA-hBu'; // Your Google reCaptcha secret key
+ 
+if(!empty($_POST['g-recaptcha-response']))
+{
+ // Request the Google server to validate our captcha
+ $request = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$_POST['g-recaptcha-response']);
+ // The result is in a JSON format. Decoding..
+ $response = json_decode($request);
+ 
+ if($response->success)
+ {
+  // Here goes your code.
+  echo 'Congratulations! You have passed the reCaptcha!';
+ }
+ else
+ {
+  echo 'Please, try again. You must complete the Captcha!';
+ }
+}
+
+
 ?>
