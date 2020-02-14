@@ -4,13 +4,13 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Eine Nachricht von deiner Website www.edithion.de <info@edithion.de>';
+$from = 'Eine Nachricht von deiner www.edithion.de Website';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <ask@filizanka.net>';
+$sendTo = 'Deine Website <wos_hingehen_soll@gmx.net>';
 
 // subject of the email
-$subject = 'New message 2020';
+$subject = 'Neue Nachricht und das Spamfrei www.edithion.de';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
@@ -22,7 +22,7 @@ $fields = array('name' => 'Name', 'surname' => 'Surname', 'need' => 'Need', 'ema
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
 
-$secret_key = '6Lec09gUAAAAACJlfqVwE4gACCenLh6wSqNA-hBu'; // Your Google reCaptcha secret key
+$secret_key = 'the key'; // Your Google reCaptcha secret key
 
 /*
  *  LET'S DO THE SENDING
