@@ -29,6 +29,9 @@ $errorMessage = 'There was an error while submitting the form. Please try again 
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
 error_reporting(E_ALL & ~E_NOTICE);
 
+
+
+//-------------------------------
 try
 {
 
@@ -59,6 +62,11 @@ catch (\Exception $e)
 {
     $responseArray = array('type' => 'danger', 'message' => $errorMessage);
 }
+
+// ------------------------------------------
+
+
+
 
 
 // if requested by AJAX request return JSON response
