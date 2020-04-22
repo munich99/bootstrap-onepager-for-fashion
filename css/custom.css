@@ -63,7 +63,21 @@
     width: 5%;
 }
 
-/* none bootstrap */
+
+.carousel-indicators {
+    bottom: -3px!important;
+}
+.carousel-indicators li{
+    background-color: #343a40!important;
+    height: 5px!important;
+    
+}
+
+.carousel-indicators .active {
+    background-color: #8b8111!important;
+}
+
+
 
 @media (min-width: 768px) {
     .whitebig {background-color: white}
