@@ -63,6 +63,19 @@
     width: 5%;
 }
 
+.carousel-indicators {
+    bottom: -3px!important;
+}
+.carousel-indicators li{
+    background-color: #343a40!important;
+    height: 5px!important;
+    
+}
+
+.carousel-indicators .active {
+    background-color: #8b8111!important;
+}
+
 /* none bootstrap */
 
 @media (min-width: 768px) {
