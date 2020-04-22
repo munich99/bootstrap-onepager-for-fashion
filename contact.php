@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 
  *  CONFIGURE EVERYTHING HERE
@@ -150,7 +151,9 @@ if(!empty($_POST['g-recaptcha-response']))
 
 
 
+
                                                     // ------------------------------------------
+
 
 
 
@@ -184,25 +187,11 @@ if(!empty($_POST['g-recaptcha-response']))
 
                                                         echo $responseArray['message'];
 
+
                                                     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
 
                 }
 
@@ -220,25 +209,5 @@ if(!empty($_POST['g-recaptcha-response']))
 
                 }
 
+
 }
-
-
-
-
-
-
-
-
-
-// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
-
-error_reporting(E_ALL & ~E_NOTICE);
-
-
-
-
-
-
-
-//-------------------------------
-

@@ -1,3 +1,3 @@
-﻿# bootstrap onepager for fashion
+# bootstrap onepager for fashion
  
 http://edithion.de/

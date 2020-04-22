@@ -63,6 +63,7 @@
     width: 5%;
 }
 
+
 .carousel-indicators {
     bottom: -3px!important;
 }
@@ -76,7 +77,7 @@
     background-color: #8b8111!important;
 }
 
-/* none bootstrap */
+
 
 @media (min-width: 768px) {
     .whitebig {background-color: white}
